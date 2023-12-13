@@ -9,9 +9,11 @@ class Flurorouter {
   static String rootRoute = '/:page';
   static String homeRoute = '/home';
   static String contactoRoute = '/contacto';
-  static String webDevRoute = '/webdev';
-  static String brandRoute = '/brand';
-  static String marketingRoute = '/marketing';
+  static String webDevRoute = '/desarrollo-web';
+  static String disenoRoute = '/diseno-branding';
+  static String marketingRoute = '/marketing-ads';
+  static String feedRoute = '/feed';
+  static String licAdmCEORoute = '/lic-administracion-de-empresas/';
 
   static void configureRoutes() {
 // def de rutas
@@ -40,13 +42,25 @@ class Flurorouter {
       transitionDuration: const Duration(milliseconds: 100),
     );
     router.define(
-      brandRoute,
+      disenoRoute,
       handler: VisitorHandlers.home,
       transitionType: TransitionType.none,
       transitionDuration: const Duration(milliseconds: 100),
     );
     router.define(
       marketingRoute,
+      handler: VisitorHandlers.home,
+      transitionType: TransitionType.none,
+      transitionDuration: const Duration(milliseconds: 100),
+    );
+    router.define(
+      feedRoute,
+      handler: VisitorHandlers.home,
+      transitionType: TransitionType.none,
+      transitionDuration: const Duration(milliseconds: 100),
+    );
+    router.define(
+      licAdmCEORoute,
       handler: VisitorHandlers.home,
       transitionType: TransitionType.none,
       transitionDuration: const Duration(milliseconds: 100),

@@ -23,7 +23,7 @@ class Testimonios extends StatelessWidget {
               name: 'Jorge Pérez',
               job: 'CEO Jp Director',
               testimonio:
-                  '"PlayCode es una empresa que ofrece un servicio de desarrollo web, diseño y marketing digital de primera calidad. Su equipo es profesional, creativo y eficiente. Me ayudaron a crear una página web para mi negocio que superó mis expectativas. Estoy muy satisfecho con el resultado y lo recomiendo al 100%"',
+                  '"Playcode Studios es una empresa que ofrece un servicio de desarrollo web, diseño y marketing digital de primera calidad. Su equipo es profesional, creativo y eficiente. Me ayudaron a crear una página web para mi negocio que superó mis expectativas. Estoy muy satisfecho con el resultado y lo recomiendo al 100%"',
             ),
             const SizedBox(width: 30),
             const Testimonio(
@@ -32,7 +32,7 @@ class Testimonios extends StatelessWidget {
               name: 'Marco Pirrongelli',
               job: 'CEO Moonable',
               testimonio:
-                  '“PlayCode es una empresa que se distingue por su profesionalismo y su calidad de trabajo. Me desarrollaron un sistema de monitoreo para transacciones que me permite estar al tanto de los riesgos del mercado. me entregaron un sistema seguro, rápido y fácil de usar. Estoy muy contento con su servicio y lo recomiendo ampliamente.”',
+                  '“Playcode Studios es una empresa que se distingue por su profesionalismo y su calidad de trabajo. Me desarrollaron un sistema de monitoreo para transacciones que me permite estar al tanto de los riesgos del mercado. me entregaron un sistema seguro, rápido y fácil de usar. Estoy muy contento con su servicio y lo recomiendo ampliamente.”',
             ),
             const SizedBox(width: 30),
             const Testimonio(

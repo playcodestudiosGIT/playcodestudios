@@ -132,7 +132,7 @@ class _StartDialogState extends State<StartDialog> {
                           },
                           child: Text(
                             'CERRAR',
-                            style: textBoton(context),
+                            style: textBoton(context, false),
                           ))
                     ],
                   )
@@ -247,7 +247,6 @@ class _StartDialogState extends State<StartDialog> {
                                   ],
                                   onChanged: (value) => setState(() {
                                         valueIndex = value!;
-                                        print(proyectTypeString);
                                       })),
                             ),
                             const SizedBox(height: 15),
@@ -328,7 +327,7 @@ class _StartDialogState extends State<StartDialog> {
                                 },
                                 child: Text(
                                   'ENVIAR',
-                                  style: textBoton(context),
+                                  style: textBoton(context, false),
                                 )),
                           const SizedBox(width: 15),
                           IconButton(

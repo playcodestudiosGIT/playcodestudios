@@ -28,7 +28,7 @@ class _HomeViewState extends State<HomeView> {
                 'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1702235083/assets/dftpnk_rfmyfm.jpg',
           ),
           const _ServiciosTrabajosSection(),
-          SizedBox(height: 60),
+          const SizedBox(height: 60),
           RefuerzoCTA(
             title: 'TIENES UN PROYECTO EN MENTE?',
             content:
@@ -36,7 +36,7 @@ class _HomeViewState extends State<HomeView> {
             textButton: 'Solicitar consulta.',
             route: Flurorouter.contactoRoute,
           ),
-          SizedBox(height: 60),
+          const SizedBox(height: 60),
           const TestimoniosSection(),
           const LogosSection(),
           const SizedBox(
@@ -55,7 +55,7 @@ class _ServiciosTrabajosSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      constraints: BoxConstraints(maxHeight: ( wSize(context)<440 ) ? 890 : 840 ),
+      constraints: BoxConstraints(maxHeight: ( wSize(context)<440 ) ? 940 : 900 ),
       // height: 930,
       // constraints: BoxConstraints.expand(width: wSize(context), height: 1100),
       child: Stack(

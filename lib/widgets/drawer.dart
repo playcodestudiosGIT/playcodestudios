@@ -93,7 +93,7 @@ class CusDrawer extends StatelessWidget {
                   ],
                 ),
                 onTap: () {
-                  NavigatorService.navigateTo(context, Flurorouter.brandRoute);
+                  NavigatorService.navigateTo(context, Flurorouter.disenoRoute);
                   userScaffoldkey.currentState!.closeDrawer();
                 },
               ),
@@ -167,7 +167,7 @@ class CusDrawer extends StatelessWidget {
                   const SizedBox(width: 15),
                   IconButton(
                     onPressed: () {
-                      UrlLaunch.launchInstagram('Contacto');
+                      UrlLaunch.launchInstagram();
                     },
                     hoverColor: bgColor,
                     icon: const Icon(FontAwesomeIcons.instagram),

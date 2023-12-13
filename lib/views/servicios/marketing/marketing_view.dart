@@ -52,7 +52,7 @@ class MarketingView extends StatelessWidget {
                   title: 'SEO',
                   tipo: AllServices.marketingSeo,
                   textContent:
-                      'La optimización de motores de búsqueda es una parte esencial del desarrollo de sitios web y del marketing web. Un sitio web compatible con SEO automáticamente tendrá una clasificación más alta en los resultados de búsqueda obtenidos de motores de búsqueda populares como Google, Yahoo y Bing. Como consecuencia, esto afectará significativamente el tráfico del sitio web. Es vital hacer que su sitio web sea compatible con SEO para mejorar su visibilidad en Internet, su imagen de marca y su tráfico.',
+                      'En Playcode Studios, comprendemos la importancia vital de optimizar motores de búsqueda para el desarrollo web y marketing online. Garantizamos que tu sitio web sea SEO-friendly, elevando su visibilidad en Google, Yahoo y Bing, y mejorando su clasificación para aumentar el tráfico. Especializados en potenciar tu presencia en línea, fortalecer tu imagen de marca y lograr resultados notables. Conéctate con nosotros para impulsar tu presencia en Internet de manera impactante.',
                 ),
                 MicroServiceItem(
                   img:
@@ -60,7 +60,7 @@ class MarketingView extends StatelessWidget {
                   title: 'Soluciones PPC',
                   tipo: AllServices.marketingPPC,
                   textContent:
-                      'A los usuarios ávidos de la web como usted les encanta buscar y solo buscan una cosa: información. En el proceso de búsqueda de información, te habrás topado con lo que se conoce como listado patrocinado.\n\nSe trata de un anuncio relevante (normalmente un anuncio de texto) con un enlace a una página de destino que se muestra cuando escribe una frase específica en el motor de búsqueda. Se cobra una tarifa por cada clic en cada enlace, siendo la cantidad ofertada por el clic el factor principal que determina su posición. El método para lograr la ubicación en esta parte de la página de enlaces patrocinados se llama búsqueda paga (también conocida como "pago por clic" o PPC).',
+                      'En Playcode Studios, entendemos la importancia de los listados patrocinados en la búsqueda web. Son anuncios relevantes que aparecen al buscar frases específicas, utilizando el modelo de pago por clic (PPC). Desarrollamos estrategias efectivas en búsqueda paga para posicionar tu contenido y maximizar resultados. Conéctate con nosotros para potenciar tu presencia en línea de manera eficiente.',
                 ),
                 MicroServiceItem(
                   img:
@@ -68,7 +68,7 @@ class MarketingView extends StatelessWidget {
                   title: 'Redes Sociales',
                   tipo: AllServices.marketingRRSS,
                   textContent:
-                      'Los sitios sociales se han convertido en el centro para que las empresas establezcan relaciones que permitan llegar a los clientes previstos, y también de manera amistosa. En palabras simples, el marketing que utiliza los recursos de las redes sociales es una plataforma idílica para captar la atención.\n\nUn significativo 85% de todos los especialistas en marketing indicaron que sus esfuerzos en las redes sociales han generado exposición para sus negocios. Otros consideraron la mejora del tráfico como otro beneficio importante, lo que llevó a la conclusión de que el marketing en redes sociales llegó para quedarse durante mucho tiempo. ¡Y eso probablemente nos dé razones para desarrollarlo para usted!',
+                      'En Playcode Studios, valoramos la importancia de las redes sociales para establecer relaciones efectivas con los clientes. El marketing en redes sociales es una plataforma ideal para atraer la atención y generar exposición, con un 85% de especialistas en marketing experimentando beneficios significativos. Desarrollamos estrategias para que su presencia en redes sociales impulse su negocio a largo plazo. Conéctate con nosotros para maximizar los beneficios de las redes sociales.',
                 ),
                 MicroServiceItem(
                   img:
@@ -76,23 +76,23 @@ class MarketingView extends StatelessWidget {
                   title: 'Marketing de contenido',
                   tipo: AllServices.marketingContenido,
                   textContent:
-                      'Al crear contenido convincente, valioso y atractivo, puede llevar su negocio al siguiente nivel. Diseñar una estrategia de contenido eficaz es todo lo que se necesita para mejorar la visibilidad y la promoción de la marca.\n\nUna estrategia de contenido atractiva es nuestro lema. Desde la preparación de un plan de juego hasta la producción de contenido, desde la publicación hasta la distribución y promoción, los servicios de marketing de contenido líderes en la industria de Playcode están diseñados para lograr sus objetivos comerciales. Impulse su negocio con contenido 100 % original, potente y atractivo para su sitio web, campañas de correo electrónico y plataformas de redes sociales.',
+                      'En Playcode Studios, entendemos el poder del contenido para llevar tu negocio al siguiente nivel. Creamos estrategias de contenido atractivas que potencian la visibilidad y promoción de tu marca. Desde la planificación hasta la distribución, nuestros servicios de marketing de contenido están diseñados para alcanzar tus objetivos comerciales. Impulsa tu negocio con contenido 100 % original y cautivador. Conéctate con nosotros para destacar en la era digital y lograr resultados impactantes.',
                 ),
               ],
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 60),
             const TitleSection(
                 title:
                     'Convierte Más Leads. Genera Más Ingresos. Construye Tu Marca.',
                 content:
                     'Si tienes una visión clara de tu negocio pero necesitas un vehículo para articular tu marca y tu mensaje, Playcode puede ayudarte a desarrollar una estrategia de marketing exitosa que convierta más leads, genere más ventas y mejore tu alcance. Lleva tu negocio donde quieras y conecta con tus clientes a través de la tecnología digital y múltiples plataformas online.'),
             
-            const SizedBox(height: 20),
+            const SizedBox(height: 60),
             RefuerzoCTA(
               textButton: 'Solicitar una consulta gratuita',
               content:
                   'En Playcode Studios, nos dedicamos exclusivamente a cada cliente, ofreciéndole una atención personalizada, un trato cercano y una entrega puntual. Nos apasiona nuestro trabajo y creemos en el poder de la creatividad y la innovación para transformar el mundo. Si quieres impulsar tu marca en el mundo online, no dudes en contactarnos. Te ofrecemos una primera consulta gratuita y un presupuesto sin compromiso. ¡Te esperamos!',
-              title: 'Agenda una consulta', route: Flurorouter.contactoRoute,
+              title: 'AGENDA UNA CONSULTA', route: Flurorouter.contactoRoute,
             ),
             const SizedBox(height: 60),
             const TitleSection(

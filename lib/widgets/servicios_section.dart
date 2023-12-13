@@ -25,7 +25,7 @@ class ServiciosSection extends StatelessWidget {
               title: 'DISEÑO Y REDES SOCIALES',
               img:
                   'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1701716006/assets/rrss_rftxsb.jpg',
-              route: Flurorouter.brandRoute,
+              route: Flurorouter.disenoRoute,
          
                   
             ),

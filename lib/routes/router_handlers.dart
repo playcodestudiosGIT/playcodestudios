@@ -24,14 +24,20 @@ class VisitorHandlers {
     if (page == 'contacto') {
       return const ContactView();
     }
-    if (page == 'webdev') {
+    if (page == 'desarrollo-web') {
       return const WebDevView();
     }
-    if (page == 'brand') {
+    if (page == 'diseno-branding') {
       return const DisenoView();
     }
-    if (page == 'marketing') {
+    if (page == 'marketing-ads') {
       return const MarketingView();
+    }
+    if (page == 'feed') {
+      return const HomeView();
+    }
+    if (page == 'lic-administracion-de-empresas') {
+      return const HomeView();
     }
     
     return const HomeView();

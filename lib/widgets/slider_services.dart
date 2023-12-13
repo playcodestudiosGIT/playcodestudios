@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:playcodestudios/constants.dart';
 import 'package:playcodestudios/styles/button_style.dart';
-
 import 'micro_service_item.dart';
 
 class SliderServices extends StatefulWidget {
@@ -45,12 +44,14 @@ class _SliderServicesState extends State<SliderServices> {
                   final i = widget.tags.indexOf(e);
 
                   return ElevatedButton(
+
                       style: (i == currentPage) ? BotonStyle.botonStyleSec : null,
+                        
                       onPressed: () => setState(() {
                             currentPage = i;
                             pageController.jumpToPage(i);
                           }),
-                      child: Text(e, style: (i == currentPage) ? textBoton(context) : null,));
+                      child: Text(e, ));
                 })
               ],
             ),

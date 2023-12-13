@@ -8,6 +8,8 @@ import 'package:playcodestudios/styles/button_style.dart';
 import 'package:playcodestudios/styles/form_input_decoration.dart';
 import 'package:provider/provider.dart';
 
+import '../../services/launch_url_service.dart';
+
 class ContactView extends StatefulWidget {
   const ContactView({super.key});
 
@@ -41,7 +43,7 @@ class _ContactViewState extends State<ContactView> {
         SizedBox(
             width: wSize(context),
             height: hSize(context),
-            child: Image(
+            child: const Image(
               image: NetworkImage(
                   'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1702251151/assets/contactbg_bvs4jw.jpg'),
               fit: BoxFit.cover,
@@ -58,7 +60,7 @@ class _ContactViewState extends State<ContactView> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: const EdgeInsets.only(left: 20),
                     constraints: const BoxConstraints(maxWidth: 900),
                     width: double.infinity,
                     child: Row(
@@ -85,7 +87,7 @@ class _ContactViewState extends State<ContactView> {
                         },
                         child: Text(
                           'INICIO',
-                          style: textBoton(context),
+                          style: textBoton(context, false),
                         ))
                   ],
                   if (!gracias) ...[
@@ -192,7 +194,7 @@ class _ContactViewState extends State<ContactView> {
                         },
                         child: Text(
                           'ENVIAR',
-                          style: textBoton(context),
+                          style: textBoton(context, false),
                         )),
                   ],
                   const SizedBox(height: 45),
@@ -207,7 +209,8 @@ class _ContactViewState extends State<ContactView> {
                           child: IconButton(
                             icon: const Icon(FontAwesomeIcons.whatsapp),
                             hoverColor: Colors.white.withOpacity(0.05),
-                            onPressed: () {},
+                            
+                            onPressed: () => UrlLaunch.launchWs('Contacto'),
                           )),
                       const SizedBox(width: 25),
                       SizedBox(
@@ -216,7 +219,7 @@ class _ContactViewState extends State<ContactView> {
                           child: IconButton(
                             icon: const Icon(FontAwesomeIcons.instagram),
                             hoverColor: Colors.white.withOpacity(0.05),
-                            onPressed: () {},
+                            onPressed: () => UrlLaunch.launchInstagram(),
                           )),
                     ],
                   ),

@@ -23,8 +23,8 @@ TextStyle text10miniOp(context) => Theme.of(context)
     .bodyMedium!
     .copyWith(fontSize: 10, color: Colors.grey);
 
-TextStyle textBoton(context) => Theme.of(context)
+TextStyle textBoton(context, bool dark) => Theme.of(context)
     .textTheme
     .bodyMedium!
-    .copyWith(fontWeight: FontWeight.bold);
+    .copyWith(fontWeight: FontWeight.bold, color: (dark) ? bgColor : null);
 

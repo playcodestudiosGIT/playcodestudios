@@ -64,10 +64,10 @@ class _HeaderInteractiveState extends State<HeaderInteractive> {
                     height: 15,
                   ),
                   TextRenderer(
-                    text: 'PlayCode te ofrece soluciones de desarrollo web, diseño y marketing digital para tu negocio. Automatiza tus procesos, construye tu web y aumenta tus ventas con nuestra ayuda. Contacta con nosotros hoy mismo.',
+                    text: 'Playcode Studios te ofrece soluciones de desarrollo web, diseño y marketing digital para tu negocio. Automatiza tus procesos, construye tu web y aumenta tus ventas con nuestra ayuda. Contacta con nosotros hoy mismo.',
                     style: TextRendererStyle.paragraph,
                     child: Text(
-                      'PlayCode te ofrece soluciones de desarrollo web, diseño y marketing digital para tu negocio. Automatiza tus procesos, construye tu web y aumenta tus ventas con nuestra ayuda. Contacta con nosotros hoy mismo.',
+                      'Playcode Studios te ofrece soluciones de desarrollo web, diseño y marketing digital para tu negocio. Automatiza tus procesos, construye tu web y aumenta tus ventas con nuestra ayuda. Contacta con nosotros hoy mismo.',
                       textAlign: TextAlign.center,
                       style: text14BodyM(context),
                       maxLines: 5,

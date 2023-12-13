@@ -87,13 +87,14 @@ class HeaderView extends StatelessWidget {
                             children: [
                               
                               Container(
+                                alignment: Alignment.center,
                                 width: double.infinity,
                                 child: TextRenderer(
                                   style: TextRendererStyle.header1,
                                   child: Text(
                                     bigTitle,
                                     maxLines: 2,
-                                    textAlign: (wSize(context) > 849) ? TextAlign.start : TextAlign.center,
+                                    textAlign: TextAlign.center,
                                     style: GoogleFonts.roboto(
                                       height: 1,
                                       fontSize: 35,

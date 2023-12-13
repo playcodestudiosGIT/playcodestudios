@@ -10,7 +10,6 @@ class BotonStyle {
 
       
   static ButtonStyle botonStyleSec = ButtonStyle(
-      
       elevation: MaterialStateProperty.all(10),
-      backgroundColor: MaterialStateProperty.all(secondaryColor));
+      backgroundColor: MaterialStateProperty.all(secondaryColor.withOpacity(0.6)));
 }

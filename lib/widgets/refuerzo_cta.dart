@@ -33,7 +33,7 @@ class RefuerzoCTA extends StatelessWidget {
               onPressed: () {
                 NavigatorService.navigateTo(context, route);
               },
-              child: Text(textButton, style: textBoton(context),)),
+              child: Text(textButton, style: textBoton(context, false),)),
           const SizedBox(height: 40),
         ],
       ),
@@ -57,7 +57,7 @@ class _RefuerzoState extends State<Refuerzo> {
       
     });
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
       constraints: const BoxConstraints(maxWidth: 800),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -88,7 +88,7 @@ class _RefuerzoState extends State<Refuerzo> {
                 style: TextRendererStyle.paragraph,
                 child: Text(widget.content!,
                 // maxLines: 5,
-                    textAlign: TextAlign.center, style: text14BodyM(context)),
+                    textAlign: (wSize(context) > 450) ? TextAlign.center : TextAlign.start, style: text14BodyM(context)),
               ),
             ),
           ]

@@ -28,7 +28,7 @@ class TitleSection extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         fontSize: 24,
                         fontStyle: FontStyle.italic,
-                        height: 1),
+                        height: 1.2),
                   ),
                 ),
               )),

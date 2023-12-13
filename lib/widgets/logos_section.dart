@@ -8,7 +8,7 @@ class LogosSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(0),
+      margin: const EdgeInsets.all(0),
       // color: bgColor,
       alignment: Alignment.center,
       width: wSize(context),
