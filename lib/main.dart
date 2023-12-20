@@ -8,6 +8,7 @@ import 'package:seo_renderer/helpers/robot_detector_web.dart';
 
 import 'providers/global_keys_provider.dart';
 import 'providers/leads_provider.dart';
+import 'providers/servicios_provider.dart';
 import 'providers/trabajos_provider.dart';
 import 'routes/router.dart';
 import 'services/local_storage.dart';
@@ -30,10 +31,11 @@ class MyApp extends StatelessWidget {
         providers: [
           ChangeNotifierProvider(create: (_) => LeadsProvider()),
           ChangeNotifierProvider(create: (_) => TrabajosProvider()),
-          ChangeNotifierProvider(create: (_) => GlobalKeysProvider())
+          ChangeNotifierProvider(create: (_) => GlobalKeysProvider()),
+          ChangeNotifierProvider(create: (_) => ServiciosProvider())
         ],
         child: RobotDetector(
-          debug: true,
+          debug: false,
           child: MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Playcode Studios',

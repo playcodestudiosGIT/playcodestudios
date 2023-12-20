@@ -12,24 +12,31 @@ class TestimoniosSection extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        SizedBox(
-            width: wSize(context),
-            height: 700,
-            child: Image.network(
-              'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1702237609/assets/Planet_1_zhh3n4.jpg',
-              fit: BoxFit.fitHeight,
-            )),
+        Container(
+          alignment: Alignment.center,
+          width: wSize(context),
+          height: 700,
+          color: Colors.black,
+        ),
+        // SizedBox(
+        //     width: wSize(context),
+        //     height: 700,
+        //     child: Image.network(
+        //       'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1702237609/assets/Planet_1_zhh3n4.jpg',
+        //       fit: BoxFit.cover,
+     
+        //     )
+        //     ),
         Container(
           alignment: Alignment.center,
           width: wSize(context),
           height: 700,
           color: bgColor.withOpacity(0.7),
         ),
-        // ignore: prefer_const_constructors
-        Column(
+        const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
+          children: [
             RefuerzoCTA(
               title: 'EN PLAYCODE STUDIOS',
               content:
@@ -37,7 +44,6 @@ class TestimoniosSection extends StatelessWidget {
               route: '',
             ),
             Testimonios(),
-            // SizedBox(height: 30)
           ],
         ),
       ],

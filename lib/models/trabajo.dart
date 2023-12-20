@@ -2,21 +2,24 @@
 
 
 import 'dart:convert';
-
-import 'package:playcodestudios/models/director.dart';
+import 'package:playcodestudios/providers/trabajos_provider.dart';
 
 class Trabajo {
   String title;
-  List<String> tags;
-  String img;
-  Director director;
+  List<JobFilters> tags;
   String description;
+  String shortDescription;
+  List<String> imgs;
+  String? video;
+  String? urlLaunch;
   Trabajo({
     required this.title,
     required this.tags,
-    required this.img,
-    required this.director,
     required this.description,
+    required this.shortDescription,
+    required this.imgs,
+    this.video,
+    this.urlLaunch,
   });
 
   factory Trabajo.fromRawJson(String str) => Trabajo.fromJson(json.decode(str));
@@ -25,17 +28,19 @@ class Trabajo {
 
     factory Trabajo.fromJson(Map<String, dynamic> json) => Trabajo(
         title: json["title"],
-        img: json["img"],
-        director: json["director"],
         description: json["description"],
-        tags: List<String>.from(json["tags"].map((x) => x)),
+        shortDescription: json["shortDescription"],
+        video: json["video"],
+        tags: List<JobFilters>.from(json["tags"].map((x) => x)),
+        imgs: List<String>.from(json["imgs"].map((x) => x)),
     );
 
     Map<String, dynamic> toJson() => {
         "title": title,
-        "img": img,
-        "director": director,
         "description": description,
-        "tags": List<dynamic>.from(tags.map((x) => x)),
+        "shortDescription": shortDescription,
+        "video": video,
+        "tags": List<JobFilters>.from(tags.map((x) => x)),
+        "imgs": List<String>.from(tags.map((x) => x)),
     };
 }

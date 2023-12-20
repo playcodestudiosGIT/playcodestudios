@@ -65,11 +65,9 @@ class Testimonio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 30),
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      // margin: const EdgeInsets.only(bottom: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       width: 280,
-      // height: 270,
-      // color: Colors.amber,
       child: Column(
         children: [
           CircleAvatar(
@@ -96,6 +94,7 @@ class Testimonio extends StatelessWidget {
             textAlign: TextAlign.center,
             style: text14BodyMOp(context).copyWith(fontStyle: FontStyle.italic),
           ),
+          
         ],
       ),
     );

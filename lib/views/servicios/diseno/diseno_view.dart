@@ -97,8 +97,9 @@ class DisenoView extends StatelessWidget {
             const TitleSection(
                 title: 'Algunos de nuestros trabajos', content: ''),
             const CarrouselWorks(),
+            const SizedBox(height: 60),
             const LogosSection(),
-            const SizedBox(height: 100)
+            const SizedBox(height: 20),
           ],
         ),
       ),
