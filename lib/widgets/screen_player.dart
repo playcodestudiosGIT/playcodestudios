@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+import 'package:video_player_platform_interface/video_player_platform_interface.dart';
 
 class ScreenPlayer extends StatefulWidget {
   final String videoUrl;
@@ -16,8 +17,16 @@ class _ScreenPlayerState extends State<ScreenPlayer> {
   void initState() {
     super.initState();
     final uriUrl = Uri.parse(widget.videoUrl);
-    videoController = VideoPlayerController.networkUrl(uriUrl)..setVolume(0)
-        ..play()
+    videoController = VideoPlayerController.networkUrl(
+            videoPlayerOptions: VideoPlayerOptions(
+              webOptions: const VideoPlayerWebOptions(
+                allowContextMenu: false,
+                allowRemotePlayback: true,
+              ),
+            ),
+            uriUrl)
+          ..setVolume(0)
+          ..play()
         // ..setLooping()
         ;
   }

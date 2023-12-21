@@ -4,6 +4,7 @@ import 'package:playcodestudios/constants.dart';
 import 'package:playcodestudios/models/trabajo.dart';
 import 'package:playcodestudios/providers/servicios_provider.dart';
 import 'package:playcodestudios/providers/trabajos_provider.dart';
+import 'package:playcodestudios/services/launch_url_service.dart';
 import 'package:playcodestudios/widgets/action_button.dart';
 import 'package:playcodestudios/widgets/tag_widget.dart';
 
@@ -36,7 +37,12 @@ class _JobDialogState extends State<JobDialog> {
               ],
               const SizedBox(height: 20),
               const Wrap(
-                children: [Tag(filterName: JobFilters.branding)],
+                children: [
+                  Tag(
+                    nameTag: 'Diseño',
+                    jobFilter: JobFilters.diseno,
+                  )
+                ],
               ),
               const SizedBox(height: 20),
               _JobDialogInformation(trabajo: widget.trabajo),
@@ -97,6 +103,15 @@ class _JobDialogInformation extends StatelessWidget {
           'Fecha: 22-05-2021',
           style: text14BodyM(context),
         ),
+        const SizedBox(height: 20),
+        if (trabajo.urlLaunch != '')
+          TextButton.icon(
+            onPressed: () {
+              UrlLaunch.launchJob(trabajo.urlLaunch!);
+            },
+            icon: const Icon(Icons.launch),
+            label: const Text('LAUNCH PROJECT'),
+          )
       ],
     );
   }

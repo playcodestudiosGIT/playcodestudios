@@ -28,7 +28,7 @@ class CarrouselServices extends StatelessWidget {
       height: 300,
       child: Swiper(
         
-        loop: true,
+        loop: false,
         viewportFraction: viewportFraction,
         scrollDirection: Axis.horizontal,
         itemCount: servicios.length,
