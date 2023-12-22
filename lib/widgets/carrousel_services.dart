@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:playcodestudios/widgets/servicio_card.dart';
 import 'package:provider/provider.dart';
 
+import '../constants.dart';
 import '../providers/servicios_provider.dart';
 
 class CarrouselServices extends StatelessWidget {
@@ -27,14 +28,19 @@ class CarrouselServices extends StatelessWidget {
       width: wSize,
       height: 300,
       child: Swiper(
-        
         loop: false,
         viewportFraction: viewportFraction,
         scrollDirection: Axis.horizontal,
         itemCount: servicios.length,
+        pagination: const SwiperPagination(
+                builder: DotSwiperPaginationBuilder(
+                    activeColor: primaryColor, color: secondaryColor)),
         itemBuilder: (context, index) {
           final ServicioCard servicio = servicios[index];
-          return servicio;
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 40),
+            child: servicio,
+          );
         },
       ),
     );

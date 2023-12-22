@@ -22,9 +22,11 @@ class _JobDialogState extends State<JobDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      contentPadding: const EdgeInsets.only(left: 30, right: 10, top: 20, bottom: 20),
       backgroundColor: bgColor,
       content: SingleChildScrollView(
         child: Container(
+          padding: const EdgeInsets.only(right: 20),
           constraints: const BoxConstraints(maxWidth: 500),
           width: double.infinity,
           child: Column(

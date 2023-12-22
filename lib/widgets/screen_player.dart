@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:chewie/chewie.dart';
 import 'package:video_player/video_player.dart';
 import 'package:video_player_platform_interface/video_player_platform_interface.dart';
 
@@ -11,47 +12,69 @@ class ScreenPlayer extends StatefulWidget {
 }
 
 class _ScreenPlayerState extends State<ScreenPlayer> {
-  late VideoPlayerController videoController;
+  late ChewieController chewieController;
+  late VideoPlayerController videoPlayerController;
+  double volume = 0;
+
+  Future<void> initControllers() async {
+    final uriUrl = Uri.parse(widget.videoUrl);
+    videoPlayerController = VideoPlayerController.networkUrl(
+      uriUrl,
+      videoPlayerOptions: VideoPlayerOptions(
+          webOptions: const VideoPlayerWebOptions(
+        allowContextMenu: false,
+        allowRemotePlayback: true,
+      )),
+    )..setVolume(volume);
+
+    chewieController = ChewieController(
+      aspectRatio: 16 / 9,
+      videoPlayerController: videoPlayerController,
+      autoPlay: true,
+      looping: true,
+      showOptions: false,
+      showControls: false,
+      autoInitialize: true
+    );
+  }
 
   @override
   void initState() {
+    initControllers();
     super.initState();
-    final uriUrl = Uri.parse(widget.videoUrl);
-    videoController = VideoPlayerController.networkUrl(
-            videoPlayerOptions: VideoPlayerOptions(
-              webOptions: const VideoPlayerWebOptions(
-                allowContextMenu: false,
-                allowRemotePlayback: true,
-              ),
-            ),
-            uriUrl)
-          ..setVolume(0)
-          ..play()
-        // ..setLooping()
-        ;
   }
 
   @override
   void dispose() {
-    videoController.dispose();
+    videoPlayerController.dispose();
+    chewieController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: videoController.initialize(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState != ConnectionState.done) {
-            return const Center(
-                child: CircularProgressIndicator(
-              strokeWidth: 2,
-            ));
-          }
-          return AspectRatio(
-            aspectRatio: videoController.value.aspectRatio,
-            child: VideoPlayer(videoController),
-          );
-        });
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        SizedBox.expand(
+          child: Chewie(controller: chewieController),
+        ),
+        Positioned(
+            right: 0,
+            top: 0,
+            child: IconButton(
+              icon: (volume == 7)
+                  ? const Icon(Icons.volume_off_rounded)
+                  : const Icon(Icons.volume_up_rounded),
+              onPressed: () => setState(() {
+                if (volume == 7) {
+                  volume = 0;
+                } else {
+                  volume = 7;
+                }
+              }),
+            ))
+      ],
+    );
   }
 }
