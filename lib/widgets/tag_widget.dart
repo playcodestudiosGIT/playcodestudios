@@ -7,8 +7,9 @@ import '../providers/trabajos_provider.dart';
 class Tag extends StatefulWidget {
   final JobFilters jobFilter;
   final String nameTag;
+  final bool isEnabled;
 
-  const Tag({super.key, required this.nameTag, required this.jobFilter});
+  const Tag({super.key, required this.nameTag, required this.jobFilter, this.isEnabled = true});
 
   @override
   State<Tag> createState() => _TagState();
@@ -29,13 +30,14 @@ class _TagState extends State<Tag> {
     }
 
     return ElevatedButton(
-      style: (isActive) ? BotonStyle.botonStyleSec : null,
-      onPressed: () {
-        Provider.of<TrabajosProvider>(context, listen: false).brandingFilter =
+        style: (isActive) ? BotonStyle.botonStyleSec : null,
+        onPressed: (!widget.isEnabled) 
+        ? null
+        : () {
+          Provider.of<TrabajosProvider>(context, listen: false).brandingFilter =
               widget.jobFilter;
-        setState(() {});
-      },
-      child: Text(widget.nameTag)
-      );
+          setState(() {});
+        },
+        child: Text(widget.nameTag));
   }
 }

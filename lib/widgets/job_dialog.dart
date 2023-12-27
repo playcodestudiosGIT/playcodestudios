@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:playcodestudios/constants.dart';
 import 'package:playcodestudios/models/trabajo.dart';
 import 'package:playcodestudios/providers/servicios_provider.dart';
-import 'package:playcodestudios/providers/trabajos_provider.dart';
 import 'package:playcodestudios/services/launch_url_service.dart';
 import 'package:playcodestudios/widgets/action_button.dart';
 import 'package:playcodestudios/widgets/tag_widget.dart';
@@ -22,7 +21,8 @@ class _JobDialogState extends State<JobDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      contentPadding: const EdgeInsets.only(left: 30, right: 10, top: 20, bottom: 20),
+      contentPadding:
+          const EdgeInsets.only(left: 30, right: 10, top: 20, bottom: 20),
       backgroundColor: bgColor,
       content: SingleChildScrollView(
         child: Container(
@@ -33,17 +33,24 @@ class _JobDialogState extends State<JobDialog> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               if (widget.trabajo.imgs.isNotEmpty) _JobSwiper(widget: widget),
-              if (widget.trabajo.video != '') ...[
+              if (widget.trabajo.videoUrl != '') ...[
                 const SizedBox(height: 20),
-                _JobScreenPlayer(widget: widget),
+                AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: ScreenPlayer(videoUrl: widget.trabajo.videoUrl!),
+                )
               ],
               const SizedBox(height: 20),
-              const Wrap(
+              Wrap(
                 children: [
-                  Tag(
-                    nameTag: 'Diseño',
-                    jobFilter: JobFilters.diseno,
-                  )
+                  ...widget.trabajo.tags.map((e) => Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Tag(
+                      nameTag: e.name,
+                      jobFilter: e,
+                      isEnabled: false,
+                    ),
+                  )).toList()
                 ],
               ),
               const SizedBox(height: 20),
@@ -119,28 +126,8 @@ class _JobDialogInformation extends StatelessWidget {
   }
 }
 
-class _JobScreenPlayer extends StatelessWidget {
-  const _JobScreenPlayer({
-    super.key,
-    required this.widget,
-  });
-
-  final JobDialog widget;
-
-  @override
-  Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 16 / 9,
-      child: ScreenPlayer(
-        videoUrl: widget.trabajo.video!,
-      ),
-    );
-  }
-}
-
 class _JobSwiper extends StatelessWidget {
   const _JobSwiper({
-    super.key,
     required this.widget,
   });
 
@@ -154,8 +141,8 @@ class _JobSwiper extends StatelessWidget {
           width: double.infinity,
           height: 450,
           child: Swiper(
-            autoplay: true,
-            autoplayDelay: 5000,
+            // autoplay: true,
+            // autoplayDelay: 5000,
             itemWidth: 400,
             scrollDirection: Axis.horizontal,
             itemCount: widget.trabajo.imgs.length,

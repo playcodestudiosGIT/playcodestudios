@@ -26,9 +26,9 @@ class TrabajosProvider extends ChangeNotifier {
   List<Trabajo> _allList = [
     Trabajo(
         title: 'E Fashion Week Promo',
-        video: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1703185388/trabajos/efw_nc43cp.mp4',
-        tags: [JobFilters.branding],
-        urlLaunch: '',
+        videoUrl: '',
+        tags: [JobFilters.video, JobFilters.all, JobFilters.animacion],
+        urlLaunch: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1703185388/trabajos/efw_nc43cp.mp4',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703220082/trabajos/e0_jxeg6c.png',
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703219813/trabajos/e_etraao.png',
@@ -37,152 +37,179 @@ class TrabajosProvider extends ChangeNotifier {
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703219979/trabajos/e3_hdsawz.png',
         ],
         description:
-            'Enim sunt pariatur ut ea aliqua. Duis ex enim laboris sint excepteur veniam ullamco sint mollit reprehenderit nisi ea. Reprehenderit cillum non commodo quis enim occaecat et do sint Lorem adipisicing duis dolore do.',
+            'Promocion parte de la campaña de E Entertainment Television para el E Fashion Week',
         shortDescription:
-            'Aplicacion web, sistema LMS y venta de cursos online'),
+            'Promo de 30 segundos para medios de comunicación para E Enterteinment Television'),
     Trabajo(
         title: 'Gaia10',
-        video: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1703185082/trabajos/gaia_c03uud.mp4',
-        tags: [JobFilters.branding],
-        urlLaunch: '',
+        videoUrl: '',
+        tags: [JobFilters.all, JobFilters.animacion, JobFilters.video],
+        urlLaunch: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1703185082/trabajos/gaia_c03uud.mp4',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703221321/trabajos/gaia10_fssled.png'
         ],
         description:
-            'Enim sunt pariatur ut ea aliqua. Duis ex enim laboris sint excepteur veniam ullamco sint mollit reprehenderit nisi ea. Reprehenderit cillum non commodo quis enim occaecat et do sint Lorem adipisicing duis dolore do.',
+            'Video corporativo introductorio a la marca. Fundación Gaia10',
         shortDescription:
-            'Animación de logo, loop para pantallas'),
+            'Animación de Branding - Intro'),
     Trabajo(
         title: 'Revista Aguapanela',
-        video: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1703185073/trabajos/aguapanela_dhw932.mp4',
-        tags: [JobFilters.branding],
-        urlLaunch: '',
+        videoUrl: '',
+        tags: [JobFilters.all, JobFilters.animacion, JobFilters.video],
+        urlLaunch: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1703185073/trabajos/aguapanela_dhw932.mp4',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703220406/trabajos/aguapanela_v75wvx.png'
         ],
         description:
-            'Enim sunt pariatur ut ea aliqua. Duis ex enim laboris sint excepteur veniam ullamco sint mollit reprehenderit nisi ea. Reprehenderit cillum non commodo quis enim occaecat et do sint Lorem adipisicing duis dolore do.',
+            'Video de animación de logotipo para pantallas gigantes tipo loop',
         shortDescription:
             'Animación de logo, loop para pantallas'),
     Trabajo(
         title: 'Acelerador TV',
-        video: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1703185389/trabajos/acelerador_ccsnvw.mp4',
-        tags: [JobFilters.branding],
-        urlLaunch: '',
+        videoUrl: '',
+        tags: [JobFilters.branding, JobFilters.all, JobFilters.animacion, JobFilters.video],
+        urlLaunch: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1703185389/trabajos/acelerador_ccsnvw.mp4',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703221111/trabajos/acelerador_o8kmj3.png',
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703221112/trabajos/acelerador2_wegp7o.png',
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703221112/trabajos/acelerador3_ggwfd3.png'
         ],
         description:
-            'Enim sunt pariatur ut ea aliqua. Duis ex enim laboris sint excepteur veniam ullamco sint mollit reprehenderit nisi ea. Reprehenderit cillum non commodo quis enim occaecat et do sint Lorem adipisicing duis dolore do.',
+            'Idenditdad Gráfica completa para Acelerador Tv transmitido por NexTV Panamá',
         shortDescription:
-            'Animación de logo, loop para pantallas'),
+            'Identidad Gráfica para programa de televisión'),
     Trabajo(
         title: 'EasyYes.com',
-        video: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1703185370/trabajos/easyyes_dz1r67.mp4',
-        tags: [JobFilters.branding],
-        urlLaunch: '',
+        videoUrl: '',
+        tags: [JobFilters.all, JobFilters.branding],
+        urlLaunch: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1703185370/trabajos/easyyes_dz1r67.mp4',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703220537/trabajos/easyyes_ffpfdz.png'
         ],
         description:
-            'Enim sunt pariatur ut ea aliqua. Duis ex enim laboris sint excepteur veniam ullamco sint mollit reprehenderit nisi ea. Reprehenderit cillum non commodo quis enim occaecat et do sint Lorem adipisicing duis dolore do.',
+            'Animación de logo para EasyYes.com',
         shortDescription:
             'Animación de logo, loop para pantallas'),
     Trabajo(
-        title: 'Playcode',
+        title: 'Playcode Studios',
         tags: [
+          JobFilters.all,
           JobFilters.branding,
           JobFilters.diseno,
           JobFilters.webDesign,
-          JobFilters.webdev
+          JobFilters.webdev,
+          JobFilters.uiux
         ],
         urlLaunch: 'https://www.playcodestudios.com',
-        video: '',
+        videoUrl: '',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1699638169/assets/playcode_nyg6gy.png'
         ],
         description:
-            'In eu nulla sunt esse ea ut. Sunt dolor excepteur qui eiusmod velit enim pariatur aute. Eiusmod ea voluptate sint ex sunt velit velit sint et esse nulla velit elit dolore. Eu nisi deserunt magna enim sint id sunt enim ad fugiat eu. Deserunt sint duis duis do. Pariatur aute aliquip ullamco eiusmod irure ad exercitation nisi quis laboris mollit sint enim.',
-        shortDescription: 'Identidad gráfica y Desarrollo web - en expanción'),
+            'Desarrollo web para ofrecer servicios, aplicación Multiplataforma con dashboard de mantenimiento. Se usó Flutter, EpressJs, NodeJs y MongoDB',
+        shortDescription: 'Identidad gráfica y Desarrollo web'),
     Trabajo(
         title: 'IDN Reel 2010',
         tags: [
+          JobFilters.all,
           JobFilters.branding,
           JobFilters.diseno,
           JobFilters.reel,
           JobFilters.video
         ],
-        urlLaunch: '',
-        video:
-            'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1699382519/trabajos/IDN_INTRO_rfekcb.mp4',
+        urlLaunch: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1699382519/trabajos/IDN_INTRO_rfekcb.mp4',
+        videoUrl: '',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1699383052/trabajos/superstudio_zrda5w.png'
         ],
         description:
-            'Amet reprehenderit ex proident non adipisicing proident tempor cupidatat cupidatat sit. Est reprehenderit nisi amet excepteur. Ullamco reprehenderit velit ad excepteur velit anim sunt in deserunt ipsum. Eu nisi laboris quis adipisicing tempor. Ea dolore enim do non ullamco est dolor exercitation proident do non. Labore officia commodo ullamco consectetur sit non ut.',
+            'Colaboración con IDN Studio para realizar un reel animado en el año 2010',
         shortDescription: 'Colaboración Estudio IDN Argentina en el año 2010'),
     Trabajo(
+        title: 'Hidraserca',
+        videoUrl: '',
+        tags: [JobFilters.all, JobFilters.wevDev, JobFilters.webDesign],
+        urlLaunch: 'https://hidraserca.com.ve/',
+        imgs: [
+          'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703614162/trabajos/hidraserca1_gtaxhe.png',
+          'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703614162/trabajos/hidraserca2_t0z3bb.png',
+          'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703614161/trabajos/hidraserca3_bjyosw.png'
+        ],
+        description:
+            'Desarrollo web tipo Ecommerce para Hidraserca, Se uso WordPress',
+        shortDescription:
+            'Desarrollo web tipo Ecommerce para Hidraserca, Se uso WordPress'),
+    Trabajo(
+        title: 'The Little Gym',
+        videoUrl: '',
+        tags: [JobFilters.all, JobFilters.wevDev, JobFilters.uiux],
+        urlLaunch: 'https://thelittlegym.com.pa/#/',
+        imgs: [
+          'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703610478/trabajos/tlg_-_portada_et0rha.png',
+          'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703610478/trabajos/tlg_footer_g7cfwn.png',
+          'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703610479/trabajos/tlg_sec1_mf1hap.png'
+        ],
+        description:
+            'Desarrollo de Landing Page para The Little Gym Panamá',
+        shortDescription:
+            'Desarrollo de Landing Page para The Little Gym Panamá'),
+    Trabajo(
         title: 'Tormenta Creativa',
-        video: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1699382512/trabajos/logo_spot_vtsf8q.mp4',
-        tags: [JobFilters.branding],
-        urlLaunch: '',
+        videoUrl: '',
+        tags: [JobFilters.all, JobFilters.branding, JobFilters.animacion],
+        urlLaunch: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1699382512/trabajos/logo_spot_vtsf8q.mp4',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1703220813/trabajos/tormenta_creativa_rpwptw.png'
         ],
         description:
-            'Enim sunt pariatur ut ea aliqua. Duis ex enim laboris sint excepteur veniam ullamco sint mollit reprehenderit nisi ea. Reprehenderit cillum non commodo quis enim occaecat et do sint Lorem adipisicing duis dolore do.',
+            'Diseño de branding y Animación de Logotipo',
         shortDescription:
-            'Animación de logo, loop para pantallas'),
+            'Diseño de branding y Animación de Logotipo'),
     Trabajo(
         title: 'Sonata del Pajarillo',
-        tags: [JobFilters.video, JobFilters.branding, JobFilters.reel],
-        urlLaunch: '',
-        video:
-            'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1699382478/trabajos/Sonata_del_Pajarillo_Trailer_imloob.mp4',
+        tags: [JobFilters.all, JobFilters.video, JobFilters.branding, JobFilters.reel, JobFilters.animacion],
+        urlLaunch: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1699382478/trabajos/Sonata_del_Pajarillo_Trailer_imloob.mp4',
+        videoUrl: '',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1699383633/trabajos/sonata_del_pajarillo_pig6fr.png'
         ],
         description:
-            'Laboris adipisicing duis labore velit. Tempor occaecat mollit eu esse aliqua sunt. Et ut sunt aute qui ex irure dolore laboris cupidatat consequat consectetur aliqua.',
+            'En colaboración con COFAV, Villa del Cine y el CNAC se realizo un largometraje de una Comedia Romámtica estrenada en 33 Salas de cine a nivel nacional - Venezuela.',
         shortDescription:
-            'Producción cinematográfica en colaboración con La Villa del Cine, Centro Nacional Autónomo de Cine'),
+            'Producción cinematográfica en colaboración con COFAV, La Villa del Cine, Centro Nacional Autónomo de Cine'),
     Trabajo(
         title: 'TYC TV',
-        tags: [JobFilters.branding],
-        urlLaunch: '',
-        video:
-            'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1699382507/trabajos/tyc_yqglko.mp4',
+        tags: [JobFilters.all, JobFilters.branding, JobFilters.reel, JobFilters.video],
+        urlLaunch: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1699382507/trabajos/tyc_yqglko.mp4',
+        videoUrl: '',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1699383934/trabajos/tyc_d0ldah.png'
         ],
         description:
-            'Reprehenderit consectetur eu culpa eiusmod sint aliquip elit qui elit in duis fugiat sint. Ex sit laboris enim elit eu mollit do adipisicing irure ipsum veniam. Enim enim fugiat reprehenderit aliquip nulla eu duis voluptate officia consequat consectetur aliquip est est. Id cillum consequat magna veniam.',
+            'Cambio de Paradigma para TYC TV, Nueva imagen para transmisiones',
         shortDescription:
-            'Identidad visual animada para Transmisiones en vivo'),
+            'Identidad visual animada para Transmisiones'),
     Trabajo(
         title: 'Chile Vision Noticiero',
-        tags: [JobFilters.video],
-        urlLaunch: '',
-        video:
-            'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1699382542/trabajos/ID_NOTICIERO_CHILEVISION_kzm9wb.mp4',
+        tags: [JobFilters.all, JobFilters.video, JobFilters.animacion, JobFilters.reel],
+        urlLaunch: 'https://res.cloudinary.com/dyxt5lhzw/video/upload/v1699382542/trabajos/ID_NOTICIERO_CHILEVISION_kzm9wb.mp4',
+        videoUrl: '',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1699384188/trabajos/chv_yy4kb8.png'
         ],
-        description: 'Identidad visual animada para Transmisiones en vivo',
+        description: 'Identidad visual animada para Transmisiones en vivo incluyendo su noticiero',
         shortDescription:
-            'Identidad visual animada para Transmisiones en vivo'),
+            'Identidad visual animada para Transmisiones'),
     Trabajo(
         title: 'JP Director',
-        video: '',
-        tags: [JobFilters.branding],
+        videoUrl: '',
+        tags: [JobFilters.all, JobFilters.wevDev, JobFilters.webDesign, JobFilters.uiux],
         urlLaunch: 'https://www.jpdirector.net',
         imgs: [
           'https://res.cloudinary.com/dyxt5lhzw/image/upload/v1699387311/trabajos/jphome_ozhcg5.png'
         ],
         description:
-            'Enim sunt pariatur ut ea aliqua. Duis ex enim laboris sint excepteur veniam ullamco sint mollit reprehenderit nisi ea. Reprehenderit cillum non commodo quis enim occaecat et do sint Lorem adipisicing duis dolore do.',
+            'Desarrollo de un sistema web tipo LMS para venta y estudios online de cursos sobre publicidad online',
         shortDescription:
             'Aplicacion web, sistema LMS y venta de cursos online'),
   ];

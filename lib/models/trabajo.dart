@@ -10,7 +10,7 @@ class Trabajo {
   String description;
   String shortDescription;
   List<String> imgs;
-  String? video;
+  String? videoUrl;
   String? urlLaunch;
   Trabajo({
     required this.title,
@@ -18,7 +18,7 @@ class Trabajo {
     required this.description,
     required this.shortDescription,
     required this.imgs,
-    this.video,
+    this.videoUrl,
     this.urlLaunch,
   });
 
@@ -30,7 +30,7 @@ class Trabajo {
         title: json["title"],
         description: json["description"],
         shortDescription: json["shortDescription"],
-        video: json["video"],
+        videoUrl: json["videoUrl"],
         tags: List<JobFilters>.from(json["tags"].map((x) => x)),
         imgs: List<String>.from(json["imgs"].map((x) => x)),
     );
@@ -39,7 +39,7 @@ class Trabajo {
         "title": title,
         "description": description,
         "shortDescription": shortDescription,
-        "video": video,
+        "videoUrl": videoUrl,
         "tags": List<JobFilters>.from(tags.map((x) => x)),
         "imgs": List<String>.from(tags.map((x) => x)),
     };

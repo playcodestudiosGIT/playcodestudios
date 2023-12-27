@@ -1,7 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:playcodestudios/constants.dart';
-import 'package:playcodestudios/providers/servicios_provider.dart';
 import 'package:playcodestudios/providers/trabajos_provider.dart';
 import 'package:playcodestudios/widgets/job_card.dart';
 import 'package:playcodestudios/widgets/tag_widget.dart';
@@ -27,8 +26,6 @@ class CarrouselWorks extends StatelessWidget {
       scaleResalted = 0.9;
     }
 
-    AllServices.values.map((e) => print(e));
-
     return Column(
       children: [
         const _FilterCarrousel(),
@@ -37,8 +34,8 @@ class CarrouselWorks extends StatelessWidget {
           height: 450,
           child: Swiper(
             loop: false,
-            autoplay: true,
-            autoplayDelay: 5000,
+            // autoplay: true,
+            // autoplayDelay: 5000,
             viewportFraction: viewportFraction,
             itemWidth: 400,
             scale: scaleResalted,
@@ -83,7 +80,12 @@ class _FilterCarrousel extends StatelessWidget {
             SizedBox(width: 15),
             Tag(nameTag: 'Reels', jobFilter: JobFilters.reel),
             SizedBox(width: 15),
-            Tag(nameTag: 'Desarrollo web', jobFilter: JobFilters.webdev),
+            Tag(nameTag: 'Desarrollo web', jobFilter: JobFilters.webDesign),
+            SizedBox(width: 15),
+            Tag(nameTag: 'Diseño web', jobFilter: JobFilters.wevDev),
+            SizedBox(width: 15),
+            Tag(nameTag: 'Diseño UI/UX', jobFilter: JobFilters.uiux),
+            SizedBox(width: 15),
           ],
         ),
       ),
